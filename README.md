@@ -94,7 +94,7 @@ jupyter notebook tomato_yolov26_reproduce.ipynb
 ## Alur Eksperimen
 
 1. B1 - Tinjauan pustaka arsitektur YOLO26 dan klaim baseline ImageNet (71.4%).
-2. B2 - Penyiapan dataset publik VegNet Tomato (3.061 citra, 4 kelas).
+2. B2 - Penyiapan dataset publik VegNet Tomato (2.361 citra aktif, 4 kelas).
 3. B3 - Penyiapan environment runtime dan dependensi pustaka.
 4. B4 - Pemuatan bobot pretrained resmi `yolo26n-cls.pt`.
 5. B5 - Evaluasi inferensi bobot pretrained pada data uji tomat untuk membuktikan kebutuhan adaptasi domain.
@@ -108,7 +108,7 @@ jupyter notebook tomato_yolov26_reproduce.ipynb
 |:---|:---|:---|:---:|
 | Klaim Paper B1 | YOLO26n-cls Pretrained | ImageNet-1k | 71.40% |
 | Evaluasi B5 | YOLO26n-cls Pretrained (tanpa fine-tune) | VegNet Tomato Test (238 citra) | 0.42% |
-| Pelatihan B6 | YOLO26n-cls From Scratch (50 epoch) | VegNet Tomato Test (238 citra) | 94.96% |
+| Pelatihan B6 | YOLO26n-cls From Scratch (32 epoch, best ep-22) | VegNet Tomato Test (238 citra) | 94.96% |
 
 ---
 
