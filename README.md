@@ -45,7 +45,7 @@ Catatan: Direktori data/dataset tidak disimpan langsung di repository Git untuk 
 - Nama: VegNet - Vegetable Dataset with Quality
 - Sumber: Mendeley Data (DOI: 10.17632/6nxnjbn9w6.1)
 - Penulis: Suryawanshi, Patil, Chumchu (2022)
-- Subset yang digunakan: Direktori `Tomato` (3.061 citra)
+- Subset yang digunakan: Direktori `Tomato` (2.361 citra aktif)
 - Lisensi: CC BY 4.0
 
 ### Dataset Private (Kelompok)
