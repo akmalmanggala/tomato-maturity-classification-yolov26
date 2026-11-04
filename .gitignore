@@ -1,0 +1,27 @@
+# Dataset & Zips (Jangan push dataset ke GitHub karena ukuran besar)
+dataset/
+data/*
+!data/README.md
+*.zip
+*.tar
+*.gz
+
+# YOLO Training Artefacts & Weights
+runs/
+*.pt
+*.onnx
+*.engine
+
+# Python & Jupyter
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+.virtual_env/
+venv/
+env/
+
+# OS Specific
+.DS_Store
+Thumbs.db
+desktop.ini
