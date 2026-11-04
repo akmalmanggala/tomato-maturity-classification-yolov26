@@ -107,8 +107,8 @@ jupyter notebook tomato_yolov26_reproduce.ipynb
 | Skenario | Konfigurasi Model | Dataset Uji | Top-1 Accuracy |
 |:---|:---|:---|:---:|
 | Klaim Paper B1 | YOLO26n-cls Pretrained | ImageNet-1k | 71.40% |
-| Evaluasi B5 | YOLO26n-cls Pretrained (tanpa fine-tune) | VegNet Tomato Test | *diisi saat run* |
-| Pelatihan B6 | YOLO26n-cls From Scratch (50 epoch) | VegNet Tomato Test | *diisi saat run* |
+| Evaluasi B5 | YOLO26n-cls Pretrained (tanpa fine-tune) | VegNet Tomato Test (238 citra) | 0.42% |
+| Pelatihan B6 | YOLO26n-cls From Scratch (50 epoch) | VegNet Tomato Test (238 citra) | 94.96% |
 
 ---
 
