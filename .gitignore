@@ -25,3 +25,7 @@ env/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Catatan internal kuliah
+tugas.md
+arsitektur dan topik.md
