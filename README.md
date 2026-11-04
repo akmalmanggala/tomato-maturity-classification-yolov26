@@ -1,89 +1,86 @@
-# 🍅 Tomato Maturity Classification with YOLOv26
+# Tomato Maturity Classification with YOLOv26
 
-> **Mata Kuliah**: Sains Data Terapan  
-> **Tugas**: Kelompok 2  
-> **Topik**: Klasifikasi Tingkat Kematangan Buah Tomat  
-> **Arsitektur**: YOLOv26 (Image Classification)
+Mata Kuliah: Sains Data Terapan  
+Tugas: Kelompok 2  
+Topik: Klasifikasi Tingkat Kematangan Buah Tomat  
+Arsitektur: YOLOv26 (Image Classification)
 
 ---
 
-## 📋 Deskripsi Proyek
+## Deskripsi Proyek
 
-Proyek ini mengimplementasikan **klasifikasi tingkat kematangan buah tomat** menggunakan arsitektur deep learning terbaru **YOLOv26** dari Ultralytics. Tomat diklasifikasikan ke dalam 4 kelas:
+Proyek ini mengimplementasikan klasifikasi tingkat kematangan buah tomat menggunakan arsitektur deep learning YOLOv26 dari Ultralytics. Citra tomat diklasifikasikan ke dalam 4 kategori mutu dan kematangan:
 
 | Kelas | Deskripsi |
 |:---|:---|
-| `Unripe` | Tomat mentah (hijau) |
-| `Ripe` | Tomat matang (merah) |
+| `Unripe` | Tomat mentah (berwarna hijau) |
+| `Ripe` | Tomat matang (berwarna merah) |
 | `Old` | Tomat lewat matang / tua |
-| `Damaged` | Tomat rusak / cacat |
+| `Damaged` | Tomat rusak, cacat, atau busuk |
 
 ---
 
-## 📁 Struktur Repository
+## Struktur Repository
 
-```
+```text
 tomato-maturity-classification-yolov26/
-│
-├── 📓 tomato_yolov26_reproduce.ipynb   # Notebook utama (B3–B6)
-├── 📄 README.md                        # Dokumentasi proyek
-├── 📄 requirements.txt                 # Daftar library
-├── 📄 .gitignore                       # File yang dikecualikan dari git
-│
-├── 📂 paper/
-│   └── 2606.03748v1.pdf               # Paper acuan YOLO26 (arXiv)
-│
-└── 📂 data/
-    └── README.md                       # Panduan download dataset
+|-- tomato_yolov26_reproduce.ipynb   # Notebook eksperimen utama (B3-B6)
+|-- README.md                        # Dokumentasi proyek
+|-- requirements.txt                 # Dependensi Python
+|-- .gitignore                       # Berkas yang dikecualikan dari Git
+|-- paper/
+|   |-- 1-s2.0-S2352340922008629-main.pdf   # Paper dataset VegNet (Elsevier)
+|   `-- 2606.03748v1.pdf                    # Paper resmi arsitektur YOLO26 (arXiv)
+`-- data/
+    `-- README.md                    # Dokumentasi dan panduan dataset
 ```
 
-> **Catatan**: Folder `dataset/` tidak di-push ke GitHub karena ukurannya besar.  
-> Dataset didownload otomatis saat menjalankan notebook. Lihat [data/README.md](data/README.md).
+Catatan: Direktori data/dataset tidak disimpan langsung di repository Git untuk menjaga ukuran repositori tetap ringan. Dataset diunduh secara terpisah atau dipersiapkan saat menjalankan notebook.
 
 ---
 
-## 🗂️ Dataset
+## Dataset
 
-**Dataset Publik (Reproduce Results):**
-- **Nama**: VegNet — Vegetable Dataset with Quality
-- **Sumber**: Mendeley Data — [doi: 10.17632/6nxnjbn9w6.1](https://data.mendeley.com/datasets/6nxnjbn9w6/1)
-- **Penulis**: Suryawanshi, Patil, Chumchu (2022)
-- **Subset yang digunakan**: Folder `Tomato` (3.061 foto)
-- **Lisensi**: CC BY 4.0 (Gratis untuk riset)
+### Dataset Publik (Reproduce Results)
+- Nama: VegNet - Vegetable Dataset with Quality
+- Sumber: Mendeley Data (DOI: 10.17632/6nxnjbn9w6.1)
+- Penulis: Suryawanshi, Patil, Chumchu (2022)
+- Subset yang digunakan: Direktori `Tomato` (3.061 citra)
+- Lisensi: CC BY 4.0
 
-**Dataset Private (Kelompok):**
-- Foto tomat diambil sendiri oleh anggota kelompok
-- Dianotasi menggunakan **Label Studio**
-- Kelas: `mentah`, `setengah_matang`, `matang`
+### Dataset Private (Kelompok)
+- Data primer dikumpulkan langsung oleh anggota kelompok menggunakan kamera ponsel.
+- Pelabelan dilakukan melalui Label Studio.
+- Kelas target: `mentah`, `setengah_matang`, `matang`.
 
 ---
 
-## 📄 Paper Acuan
+## Paper Acuan
 
-| Komponen | Detail |
+| Komponen | Keterangan |
 |:---|:---|
-| **Paper** | Ultralytics YOLO26: Unified Real-Time End-to-End Vision Models |
-| **Penulis** | Glenn Jocher et al. (2026) |
-| **Publikasi** | arXiv:2606.03748 |
-| **Link** | https://arxiv.org/abs/2606.03748 |
-| **Klaim Akurasi** | Top-1: 71.4% (yolo26n-cls, ImageNet) |
+| Paper Arsitektur | Ultralytics YOLO26: Unified Real-Time End-to-End Vision Models |
+| Penulis | Glenn Jocher et al. (2026) |
+| Publikasi | arXiv:2606.03748 |
+| Tautan | https://arxiv.org/abs/2606.03748 |
+| Baseline ImageNet | Top-1 Accuracy: 71.4% (yolo26n-cls) |
 
 ---
 
-## 🚀 Cara Menjalankan
+## Panduan Penggunaan
 
-### Opsi 1: Google Colab (Direkomendasikan)
+### 1. Google Colab (Disarankan)
 
-Klik tombol di bawah untuk langsung membuka notebook di Google Colab:
+Buka notebook langsung di Google Colab:
+https://colab.research.google.com/github/akmalmanggala/tomato-maturity-classification-yolov26/blob/main/tomato_yolov26_reproduce.ipynb
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/akmalmanggala/tomato-maturity-classification-yolov26/blob/main/tomato_yolov26_reproduce.ipynb)
+Langkah eksekusi:
+1. Pastikan runtime menggunakan hardware acceleration GPU (T4 GPU).
+2. Jalankan cell instalasi dependensi (`ultralytics`).
+3. Unggah arsip `Tomato.zip` saat diminta pada cell penyiapan dataset.
+4. Jalankan pengujian inferensi model pretrained (B5) dan pelatihan from scratch (B6).
 
-**Langkah:**
-1. Pastikan runtime GPU aktif: `Runtime → Change runtime type → T4 GPU`
-2. Jalankan semua cell dari atas ke bawah (`Runtime → Run all`)
-3. Saat diminta upload, upload file `Tomato.zip` (lihat [data/README.md](data/README.md))
-
-### Opsi 2: Lokal
+### 2. Lingkungan Lokal
 
 ```bash
 git clone https://github.com/akmalmanggala/tomato-maturity-classification-yolov26.git
@@ -94,37 +91,28 @@ jupyter notebook tomato_yolov26_reproduce.ipynb
 
 ---
 
-## 🧪 Alur Eksperimen
+## Alur Eksperimen
 
-```
-B1. Paper YOLO26 (arXiv:2606.03748) → Klaim: Top-1 = 71.4% di ImageNet
-         │
-B2. Dataset Tomat VegNet (3.061 foto, 4 kelas)
-         │
-B3. Setup environment (ultralytics, torch)
-         │
-B4. Load pretrained model → yolo26n-cls.pt (bawaan paper YOLO26)
-         │
-B5. Inference pretrained → data test tomat
-    → Bandingkan hasil dengan klaim 71.4% di paper
-         │
-B6. Train from scratch → yolo26n-cls.yaml + data tomat
-    → Buktikan arsitektur YOLO26 efektif untuk kematangan tomat
-```
+1. B1 - Tinjauan pustaka arsitektur YOLO26 dan klaim baseline ImageNet (71.4%).
+2. B2 - Penyiapan dataset publik VegNet Tomato (3.061 citra, 4 kelas).
+3. B3 - Penyiapan environment runtime dan dependensi pustaka.
+4. B4 - Pemuatan bobot pretrained resmi `yolo26n-cls.pt`.
+5. B5 - Evaluasi inferensi bobot pretrained pada data uji tomat untuk membuktikan kebutuhan adaptasi domain.
+6. B6 - Pelatihan model from scratch (`yolo26n-cls.yaml`) berbasis data tomat untuk mereproduksi performa klasifikasi.
 
 ---
 
-## 📊 Hasil Eksperimen
+## Hasil Eksperimen
 
-| Eksperimen | Keterangan | Top-1 Accuracy |
-|:---|:---|:---|
-| Klaim Paper B1 | ImageNet (1.000 kelas umum) | 71.4% |
-| B5: Pretrained → Tomat | Tanpa training ulang | *(isi setelah dijalankan)* |
-| B6: Train From Scratch | Dilatih khusus data tomat | *(isi setelah dijalankan)* |
+| Skenario | Konfigurasi Model | Dataset Uji | Top-1 Accuracy |
+|:---|:---|:---|:---:|
+| Klaim Paper B1 | YOLO26n-cls Pretrained | ImageNet-1k | 71.40% |
+| Evaluasi B5 | YOLO26n-cls Pretrained (tanpa fine-tune) | VegNet Tomato Test | *diisi saat run* |
+| Pelatihan B6 | YOLO26n-cls From Scratch (50 epoch) | VegNet Tomato Test | *diisi saat run* |
 
 ---
 
-## 🔖 Sitasi
+## Referensi
 
 ```bibtex
 @article{jocher2026yolo26,

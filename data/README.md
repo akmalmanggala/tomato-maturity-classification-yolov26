@@ -1,37 +1,37 @@
-# 🍅 Panduan Dataset (VegNet Tomato)
+# Panduan Dataset (VegNet Tomato)
 
-Dataset citra buah tomat **tidak disimpan langsung di repository GitHub ini** demi mematuhi batas ukuran file GitHub dan menjaga repository tetap ringan serta teratur.
+Dataset citra buah tomat tidak disimpan langsung di repository GitHub ini untuk mematuhi batas ukuran file GitHub dan menjaga repository tetap efisien.
 
 ---
 
 ## Sumber Dataset Resmi
-* **Nama Dataset**: VegNet: Vegetable Dataset with quality (Unripe, Ripe, Old, Dried and Damaged)
-* **Penulis**: Yogesh Suryawanshi, Kailas Patil, Prawit Chumchu (2022)
-* **Repositori Resmi**: Mendeley Data
-* **DOI**: [10.17632/6nxnjbn9w6.1](https://doi.org/10.17632/6nxnjbn9w6.1)
-* **Link Akses**: [https://data.mendeley.com/datasets/6nxnjbn9w6/1](https://data.mendeley.com/datasets/6nxnjbn9w6/1)
-* **Lisensi**: Creative Commons Attribution 4.0 International (CC BY 4.0)
+- Nama Dataset: VegNet: Vegetable Dataset with quality (Unripe, Ripe, Old, Dried and Damaged)
+- Penulis: Yogesh Suryawanshi, Kailas Patil, Prawit Chumchu (2022)
+- Repositori: Mendeley Data
+- DOI: 10.17632/6nxnjbn9w6.1
+- Tautan: https://data.mendeley.com/datasets/6nxnjbn9w6/1
+- Lisensi: Creative Commons Attribution 4.0 International (CC BY 4.0)
 
 ---
 
-## Pembagian Kelas Citra Tomat
-Hanya subset folder **`Tomato`** (atau `4. Tomato`) yang digunakan dalam eksperimen klasifikasi kematangan:
+## Pembagian Kategori Citra
+Hanya subset direktori `Tomato` (atau `4. Tomato`) yang digunakan dalam eksperimen klasifikasi kematangan:
 
-| Kelas | Kondisi / Kematangan | Jumlah Citra |
+| Kategori | Kondisi Buah | Keterangan |
 |:---|:---|:---:|
-| `Unripe` | Buah tomat mentah berwarna hijau | 145 - 845 |
-| `Ripe` | Buah tomat matang berwarna merah | 955 |
-| `Old` | Buah tomat lewat matang / tua | 1.234 |
-| `Damaged` | Buah tomat cacat, rusak, atau busuk | 27 |
-| `Dried` | *(Dilewati / 0 citra pada kategori tomat)* | 0 |
+| `Unripe` | Mentah (hijau) | Termasuk dalam pengujian |
+| `Ripe` | Matang (merah) | Termasuk dalam pengujian |
+| `Old` | Lewat matang / tua | Termasuk dalam pengujian |
+| `Damaged` | Rusak / cacat / busuk | Termasuk dalam pengujian |
+| `Dried` | Kering (0 sampel pada tomat) | Diabaikan otomatis |
 
 ---
 
 ## Cara Penggunaan di Google Colab
-1. Download file ZIP dari Mendeley Data (atau ambil folder `4. Tomato`).
-2. Kompres folder tomat menjadi `4. Tomato.zip` atau `Tomato.zip`.
-3. Jalankan notebook [`tomato_yolov26_reproduce.ipynb`](../tomato_yolov26_reproduce.ipynb).
-4. Saat cell Upload dijalankan, pilih file `.zip` tersebut. Script akan otomatis membagi data menjadi:
-   * **Train**: 80%
-   * **Val**: 10%
-   * **Test**: 10%
+1. Unduh arsip ZIP dari Mendeley Data (atau ambil folder `4. Tomato`).
+2. Kompres folder tomat menjadi `Tomato.zip` atau `4. Tomato.zip`.
+3. Buka dan jalankan notebook `tomato_yolov26_reproduce.ipynb`.
+4. Unggah berkas ZIP tersebut pada cell penyiapan dataset. Sistem akan membagi data menjadi:
+   - Train: 80%
+   - Validation: 10%
+   - Test: 10%
